@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+}
+
+#container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(images/bg-hero-mobile.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+  margin-bottom: 40px;
+  background-color: rgba(127, 255, 212, 0.15);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.tryIt {
+  background-color: white;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 3px 3px 10px var(--grayishBlue);
+}
+
+.tryIt:hover {
+  cursor: pointer;
+}
+
+.contentHeader {
+  text-align: center;
+}
+
+.contentHeader h1 {
+  margin-bottom: 24px;
+}
+
+.contentHeader p {
+  font-size: 13px;
+  line-height: 1.2rem;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.getStarted {
+  border: none;
+  padding: 10px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--pink);
+  color: white;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px var(--grayishBlue);
+  margin-bottom: 40px;
+}
+
+.getStarted:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.imageHeader {
+  text-align: center;
+}
+
+.imageHeader img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+main {
+  padding: 0 30px;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  max-width: 100%;
+  box-shadow: 1px 1px 10px var(--grayishBlue);
+  padding: 32px;
+  margin-bottom: 24px;
+  border-radius: 24px;
+}
+
+.card img {
+  width: 80%;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+}
+
+.card p {
+  font-size: 12px;
+  color: var(--grayishBlue);
+}
+
+.questionDiv {
+  text-align: center;
+  margin-top: 64px;
+  box-shadow: 1px 1px 10px var(--grayishBlue);
+  padding: 35px 5px 5px 5px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  top: 80px;
+  background-color: white;
+}
+
+.questionDiv h2 {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+footer {
+  padding: 180px 30px 30px 30px;
+  background-color: var(--veryDarkCyan);
+  color: white;
+}
+
+.logoFooter img {
+  width: 50%;
+  margin-bottom: 24px;
+}
+
+.contactData > div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.location img,
+.telephone img,
+.mail img {
+  align-self: flex-start;
+}
+
+.location p,
+.telephone p,
+.mail p {
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.list ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 24px;
+}
+
+.list ul li {
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.mediaIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+[class*="fa-"] {
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #container {
+    max-width: 1440px;
+  }
+
+  header {
+    background-image: url(images/bg-hero-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .contentHeader {
+    float: left;
+    width: 35%;
+  }
+
+  .imageHeader {
+    float: left;
+    width: 65%;
+  }
+
+  header {
+    margin-bottom: 112px;
+  }
+
+  header::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .contentHeader h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 22%;
+  }
+
+  .One,
+  .Two,
+  .Three {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cards img {
+    display: block;
+  }
+
+  .One,
+  .Two {
+    margin-bottom: 64px;
+  }
+
+  .One img,
+  .Three img {
+    order: 2;
+  }
+
+  .cards img {
+    width: 40%;
+  }
+
+  .cardContent {
+    width: 30%;
+    margin-left: 10%;
+  }
+
+  .cardContent > h2 {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .questionDiv {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 200px 100px 100px 100px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .logoFooter {
+    width: 70%;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logoData,
+  .list,
+  .lowest {
+    width: 33.33%;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    margin-left: 64px;
+  }
+
+  .list ul {
+    columns: 2;
+    column-gap: 120px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 48px;
+    right: 148px;
+  }
+}
